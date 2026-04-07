@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Plataformas de Jogos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        button {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎮 Plataformas de Jogos</h1>
+
+    <div class="container">
+        <button onclick="abrirSite('https://www.friv.com')">Jogar no Friv</button>
+        <button onclick="abrirSite('https://www.crazygames.com')">Jogar no CrazyGames</button>
+        <button onclick="abrirSite('https://poki.com')">Jogar no Poki</button>
+        <button onclick="abrirSite('https://www.y8.com')">Jogar no Y8</button>
+        <button onclick="abrirSite('https://www.miniclip.com')">Jogar no Miniclip</button>
+    </div>
+
+    <script>
+        function abrirSite(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
