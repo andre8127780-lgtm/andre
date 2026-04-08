@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor para Braille</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+      font-size: 16px;
+    }
+    .resultado {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conversor para Braille</h1>
+
+  <textarea id="texto" placeholder="Digite seu texto aqui..."></textarea><br><br>
+  <button onclick="converter()">Converter</button>
+
+  <div class="resultado" id="saida"></div>
+
+  <script>
+    const braille = {
+      'a':'⠁','b':'⠃','c':'⠉','d':'⠙','e':'⠑',
+      'f':'⠋','g':'⠛','h':'⠓','i':'⠊','j':'⠚',
+      'k':'⠅','l':'⠇','m':'⠍','n':'⠝','o':'⠕',
+      'p':'⠏','q':'⠟','r':'⠗','s':'⠎','t':'⠞',
+      'u':'⠥','v':'⠧','w':'⠺','x':'⠭','y':'⠽',
+      'z':'⠵',' ':' '
+    };
+
+    function converter() {
+      let texto = document.getElementById("texto").value.toLowerCase();
+      let resultado = "";
+
+      for (let i = 0; i < texto.length; i++) {
+        resultado += braille[texto[i]] || "?";
+      }
+
+      document.getElementById("saida").textContent = resultado;
+    }
+  </script>
+
+</body>
+</html>
